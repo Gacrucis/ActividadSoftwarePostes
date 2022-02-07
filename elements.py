@@ -20,7 +20,7 @@ class Element:
     def __repr__(self) -> str:
         return self.name
 
-class Transformador(Element):
+class Transformer(Element):
 
     def __init__(self) -> None:
         super().__init__(name='Transformador')
@@ -30,12 +30,12 @@ class Cable(Element):
     def __init__(self, name='Cable') -> None:
         super().__init__(name)
 
-class CableCorto(Cable):
+class ShortCable(Cable):
 
     def __init__(self) -> None:
         super().__init__(name='Cable Corto')
 
-class CableLargo(Cable):
+class LongCable(Cable):
 
     def __init__(self) -> None:
         super().__init__(name='Cable Largo')

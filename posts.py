@@ -1,6 +1,6 @@
 from typing import Type
 
-from elementos import Element
+from elements import Element
 
 class Post:
 
