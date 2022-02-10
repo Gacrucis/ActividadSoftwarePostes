@@ -1,0 +1,58 @@
+@startuml classDiagram
+
+    title Class Diagram
+
+    ' Classes
+    class Element {
+        ' Variables
+        +name: str 
+        +connections: list[Element]
+
+        ' Methods
+        +connect(self, dest: Element)
+        +print_connections(self)
+    }
+
+    class Transformer {
+
+    }
+
+    class Cable {
+
+    }
+
+    class ShortCable {
+
+    }
+
+    class LongCable {
+
+    }
+
+    class Post {
+        ' Variables
+        -slot_amount: int
+        +slots: list[Union[Element, None]]
+
+        ' Methods
+        +install(self, element: Element, index: int = None)
+        +remove(self, index: int = None)
+    }
+
+    class NormalPost {
+
+    }
+
+    class BigPost {
+
+    }
+
+    ' Relationships
+    Element -right-  Post
+    Element <|-- Transformer
+    Element <|-- Cable
+    Cable <|-- LongCable
+    Cable <|-- ShortCable
+    Post <|-- NormalPost
+    Post <|-- BigPost
+@enduml
