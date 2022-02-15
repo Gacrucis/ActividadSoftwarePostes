@@ -28,6 +28,11 @@ class Transformer(Element):
         super().__init__(name="Transformador")
 
 
+class Relay(Element):
+    def __init__(self) -> None:
+        super().__init__(name="Relé")
+
+
 class Cable(Element):
     def __init__(self, name="Cable") -> None:
         super().__init__(name)
